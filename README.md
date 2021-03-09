@@ -99,6 +99,13 @@ Download [Pretrained Models](https://drive.google.com/drive/folders/1EKYUl1nh6s9
 ```bash
 python test_depth.py --model depth --test_datafile 'test.txt' --which_epoch best --gpu_ids 0 --batchSize 1 --loadSize 192 640
 ```
+-Semantic Segmentation
+
+Download [Pretrained Models](https://drive.google.com/file/d/1y07J2fENcCQ1hi93VzimUfwVhXA3MAiR/view?usp=sharing) and place it in checkpoints/vkitti2kitti_seg folder for evaluating our best results. We only support a single-GPU evaluation for semantic segmentation.
+
+```bash
+python test_seg.py --which_epoch best --gpu_ids 0 --batchSize 1 --loadSize 192 640
+```
 
 ### Reference
 
