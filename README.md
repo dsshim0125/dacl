@@ -91,3 +91,8 @@ python train.py --freeze_bn --freeze_in --model depth --gpu_ids 0 --batchSize 4 
 ```bash
 python test.py --test_datafile 'test.txt' --which_epoch best --model depth --gpu_ids 0 --batchSize 1 --loadSize 192 640
 ```
+
+### Reference
+
+Some codes are sourced and modified from [CycleGAN](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix), [GASDA](https://github.com/sshan-zhao/GASDA) and [MoCo](https://github.com/facebookresearch/moco).
+
