@@ -96,7 +96,7 @@ python train.py --model seg --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_sr
 Download [Pretrained Models](https://drive.google.com/drive/folders/1EKYUl1nh6s9tfEYJxlbjgGlk8RM7-ND4?usp=sharing) and place it in checkpoints/vkitti2kitti_depth folder for evaluating our best results.
 
 ```bash
-python test.py --test_datafile 'test.txt' --which_epoch best --model depth --gpu_ids 0 --batchSize 1 --loadSize 192 640
+python test.py --model depth --test_datafile 'test.txt' --which_epoch best --model depth --gpu_ids 0 --batchSize 1 --loadSize 192 640
 ```
 
 ### Reference
