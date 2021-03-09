@@ -56,7 +56,7 @@ If you do not use Anaconda environment, please use pip3 rather than pip for depe
 
 Train a bidirectional style transfer network via our providing codes, or download [pretrained models](https://onedrive.live.com/?authkey=%21AJorokRKW4ATgZ8&id=CC387DDA3ECA5EAF%21113&cid=CC387DDA3ECA5EAF) from GASDA github.
 ```bash
-python train.py --model style --gpu_ids 0 --batchSize 8 --loadSize 256 1024
+python train.py --model style --root /YOUR/OWN/ROOT --gpu_ids 0 --batchSize 8 --loadSize 256 1024
 ```
 ### Stage 2: Unsupervised pretraining
 We train the encoder of task-specific network with the results of style transfer network in stage 1 in a bidirectional way. We also provide pretrained models of the [encoders](https://drive.google.com/drive/folders/1vDXdnQ8nRxOaixu3HkdanP0IfB39FEms?usp=sharing).
