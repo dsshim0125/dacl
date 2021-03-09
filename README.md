@@ -67,7 +67,7 @@ python train.py --model ft_pretrain --gpu_ids 0 --batchSize 8 --loadSize 256 102
 ```
 - Target to Source
 ```bash
-python train.py --model fs_pretrain --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_tgt_premodel ./cyclegan/G_Src.pth
+python train.py --model fs_pretrain --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_src_premodel ./cyclegan/G_Src.pth
 ```
 ### Stage 3: Task-specific Finetuning
 Finetune the task-specific network with pretrained encoders in stage 2. In depth estimation, we first train two unidirectional networks and finetune in a bidirectional way. Depth estimation is trained with bidirectional flow wheras semantic segmentation is trained with unidirectional flow.
