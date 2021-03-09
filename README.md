@@ -74,6 +74,6 @@ python train.py --model ft --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_tgt
 python train.py --model fs --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_tgt_premodel ./cyclegan/G_Tgt.pth
 ```
 ```bash
-python train.py --freeze_bn --freeze_in --model gasda --gpu_ids 0 --batchSize 3 --loadSize 192 640 --g_src_premodel ./cyclegan/G_Src.pth --g_tgt_premodel ./cyclegan/G_Tgt.pth --d_src_premodel ./cyclegan/D_Src.pth --d_tgt_premodel ./cyclegan/D_Tgt.pth --t_depth_premodel ./checkpoints/vkitti2kitti_ft_bn/**_net_G_Depth_T.pth --s_depth_premodel ./checkpoints/vkitti2kitti_fs_bn/**_net_G_Depth_S.pth 
+python train.py --freeze_bn --freeze_in --model gasda --gpu_ids 0 --batchSize 4 --loadSize 192 640 --g_src_premodel ./cyclegan/G_Src.pth --g_tgt_premodel ./cyclegan/G_Tgt.pth --d_src_premodel ./cyclegan/D_Src.pth --d_tgt_premodel ./cyclegan/D_Tgt.pth --t_depth_premodel ./checkpoints/vkitti2kitti_ft_bn/20_net_G_Depth_T.pth --s_depth_premodel ./checkpoints/vkitti2kitti_fs_bn/20_net_G_Depth_S.pth 
 ```
 - Semantic Segmentation
