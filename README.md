@@ -30,7 +30,7 @@ If you do not use Anaconda environment, please use pip3 rather than pip for depe
 [vKITTI](https://europe.naverlabs.com/research/computer-vision/proxy-virtual-worlds-vkitti-1/) is used as synthetic source domain data and [KITTI](http://www.cvlibs.net/datasets/kitti/raw_data.php) is used as realistic target domain data. A train & test split dataset suggested in Eigen et al. is provided in datasplit folder.
 
 ```
-DATA_ROOT
+<DATA_ROOT>
   |----kitti 
          |----2011_09_26         
          |----2011_09_28        
