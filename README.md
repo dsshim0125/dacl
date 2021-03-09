@@ -30,7 +30,7 @@ If you do not use Anaconda environment, please use pip3 rather than pip for depe
 [vKITTI](https://europe.naverlabs.com/research/computer-vision/proxy-virtual-worlds-vkitti-1/) is used as synthetic source domain data and [KITTI](http://www.cvlibs.net/datasets/kitti/raw_data.php) is used as realistic target domain data. A train & test split suggested in [Eigen et al.](https://arxiv.org/abs/1406.2283) is provided in datasplit folder and copy them in data folder.
 
 ```
-<DATA_ROOT>
+/YOUR/OWN/ROOT
   |
   |----kitti 
          |----2011_09_26         
@@ -63,11 +63,11 @@ We train the encoder of task-specific network with the results of style transfer
 
 - Source to Target
 ```bash
-python train.py --model ft_pretrain --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_tgt_premodel ./checkpoints/vkitti2kitti_style/best_net_G_Tgt.pth
+python train.py --model ft_pretrain --root /YOUR/OWN/ROOT --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_tgt_premodel ./checkpoints/vkitti2kitti_style/best_net_G_Tgt.pth
 ```
 - Target to Source
 ```bash
-python train.py --model fs_pretrain --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_src_premodel ./checkpoints/vkitti2kitti_style/best_net_G_Src.pth
+python train.py --model fs_pretrain --root /YOUR/OWN/ROOT --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_src_premodel ./checkpoints/vkitti2kitti_style/best_net_G_Src.pth
 ```
 
 ### Stage 3: Task-specific Finetuning
@@ -75,21 +75,21 @@ Finetune the task-specific network with pretrained encoders in stage 2. In depth
 #### Depth Estimation
 - Target to Source Depth  
 ```bash
-python train.py --model ft --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_tgt_premodel ./checkpoints/vkitti2kitti_style/best_net_G_Tgt.pth --t_depth_premodel ./checkpoints/vkitti2kitti_ft_pretrain/best_net_G_Pretrain_T.pth
+python train.py --model ft --root /YOUR/OWN/ROOT --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_tgt_premodel ./checkpoints/vkitti2kitti_style/best_net_G_Tgt.pth --t_depth_premodel ./checkpoints/vkitti2kitti_ft_pretrain/best_net_G_Pretrain_T.pth
 ```
 - Source to Target Depth
 ```bash
-python train.py --model fs --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_src_premodel ./checkpoints/vkitti2kitti_style/best_net_G_Src.pth --s_depth_premodel ./checkpoints/vkitti2kitti_fs_pretrain/best_net_G_Pretrain_S.pth
+python train.py --model fs --root /YOUR/OWN/ROOT --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_src_premodel ./checkpoints/vkitti2kitti_style/best_net_G_Src.pth --s_depth_premodel ./checkpoints/vkitti2kitti_fs_pretrain/best_net_G_Pretrain_S.pth
 ```
 - Bidirectional Depth
 ```bash
-python train.py --freeze_bn --freeze_in --model depth --gpu_ids 0 --batchSize 4 --loadSize 192 640 --g_src_premodel ./checkpoints/vkitti2kitti_style/best_net_G_Src.pth --g_tgt_premodel ./checkpoints/vkitti2kitti_style/best_net_G_Tgt.pth --d_src_premodel ./checkpoints/vkitti2kitti_style/best_net_D_Src.pth --d_tgt_premodel ./checkpoints/vkitti2kitti_style/best_net_D_Tgt.pth --t_depth_premodel ./checkpoints/vkitti2kitti_ft/20_net_G_Depth_T.pth --s_depth_premodel ./checkpoints/vkitti2kitti_fs/20_net_G_Depth_S.pth 
+python train.py --freeze_bn --freeze_in --model depth --root /YOUR/OWN/ROOT --gpu_ids 0 --batchSize 4 --loadSize 192 640 --g_src_premodel ./checkpoints/vkitti2kitti_style/best_net_G_Src.pth --g_tgt_premodel ./checkpoints/vkitti2kitti_style/best_net_G_Tgt.pth --d_src_premodel ./checkpoints/vkitti2kitti_style/best_net_D_Src.pth --d_tgt_premodel ./checkpoints/vkitti2kitti_style/best_net_D_Tgt.pth --t_depth_premodel ./checkpoints/vkitti2kitti_ft/20_net_G_Depth_T.pth --s_depth_premodel ./checkpoints/vkitti2kitti_fs/20_net_G_Depth_S.pth 
 ```
 #### Semantic Segmentation
 - Source to Target Segmentation
 
 ```bash
-python train.py --model seg --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_src_premodel ./cyclegan/G_Src.pth --s_depth_premodel ./checkpoints/vkitti2kitti_fs_pretrain/best_net_G_Depth_S.pth
+python train.py --model seg --root /YOUR/OWN/ROOT --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_src_premodel ./cyclegan/G_Src.pth --s_depth_premodel ./checkpoints/vkitti2kitti_fs_pretrain/best_net_G_Depth_S.pth
 ```
 ### Evaluation
 - Depth Estimation
@@ -97,14 +97,14 @@ python train.py --model seg --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_sr
 Download [Pretrained Models](https://drive.google.com/drive/folders/1EKYUl1nh6s9tfEYJxlbjgGlk8RM7-ND4?usp=sharing) and place it in checkpoints/vkitti2kitti_depth folder for evaluating our best results.
 
 ```bash
-python test_depth.py --model depth --test_datafile 'test.txt' --which_epoch best --gpu_ids 0 --batchSize 1 --loadSize 192 640
+python test_depth.py --model depth --root /YOUR/OWN/ROOT --test_datafile 'test.txt' --which_epoch best --gpu_ids 0 --batchSize 1 --loadSize 192 640
 ```
 -Semantic Segmentation
 
 Download [Pretrained Models](https://drive.google.com/file/d/1y07J2fENcCQ1hi93VzimUfwVhXA3MAiR/view?usp=sharing) and place it in checkpoints/vkitti2kitti_seg folder for evaluating our best results. We only support a single-GPU evaluation for semantic segmentation. For evaluating our method on KITTI semantic segmentation benchmark, you should download 200 images and its paired labels from KITTI semantic segmentation [here](http://www.cvlibs.net/datasets/kitti/eval_semseg.php?benchmark=semantics2015) and place it in kitti folder in root path.
 
 ```bash
-python test_seg.py --which_epoch best --gpu_ids 0 --batchSize 1 --loadSize 192 640
+python test_seg.py --root /YOUR/OWN/ROOT --which_epoch best --gpu_ids 0 --batchSize 1 --loadSize 192 640
 ```
 
 ### Reference
