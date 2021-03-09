@@ -25,3 +25,5 @@ pip install pillow==7.2.0 opencv-contrib-python==4.4.0.42
 If you do not use Anaconda environment, please use pip3 rather than pip for dependencies with Python3.
 
 ### Stage 1: Style Transfer
+
+Train a bidirectional style transfer network via our providing codes, or download [pretrained models](https://onedrive.live.com/?authkey=%21AJorokRKW4ATgZ8&id=CC387DDA3ECA5EAF%21113&cid=CC387DDA3ECA5EAF) from GASDA github.
