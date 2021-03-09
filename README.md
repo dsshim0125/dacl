@@ -70,13 +70,15 @@ python train.py --model fs_pretrain --gpu_ids 0 --batchSize 8 --loadSize 256 102
 ```
 ### Stage 3: Task-specific Finetuning
 - Depth Estimation
-    - Target to Source Depth  
+- Target to Source Depth  
 ```bash
 python train.py --model ft --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_tgt_premodel ./cyclegan/G_Tgt.pth --t_depth_premodel ./checkpoints/vkitti2kitti_ft_pretrain/**_net_G_Depth_T.pth
 ```
+- Source to Target Depth
 ```bash
 python train.py --model ft --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_src_premodel ./cyclegan/G_Src.pth --s_depth_premodel ./checkpoints/vkitti2kitti_fs_pretrain/**_net_G_Depth_S.pth
 ```
+- Bidirectional Depth
 ```bash
 python train.py --freeze_bn --freeze_in --model gasda --gpu_ids 0 --batchSize 4 --loadSize 192 640 --g_src_premodel ./cyclegan/G_Src.pth --g_tgt_premodel ./cyclegan/G_Tgt.pth --d_src_premodel ./cyclegan/D_Src.pth --d_tgt_premodel ./cyclegan/D_Tgt.pth --t_depth_premodel ./checkpoints/vkitti2kitti_ft/20_net_G_Depth_T.pth --s_depth_premodel ./checkpoints/vkitti2kitti_fs/20_net_G_Depth_S.pth 
 ```
