@@ -45,7 +45,7 @@ DATA_ROOT
 
 ### Stage 1: Style Transfer
 
-Train a bidirectional style transfer network via our providing codes, or download [pretrained models](https://onedrive.live.com/?authkey=%21AJorokRKW4ATgZ8&id=CC387DDA3ECA5EAF%21113&cid=CC387DDA3ECA5EAF) from GASDA github.
+Train a bidirectional style transfer network via our providing codes, or download [pretrained models](https://onedrive.live.com/?authkey=%21AJorokRKW4ATgZ8&id=CC387DDA3ECA5EAF%21113&cid=CC387DDA3ECA5EAF) from GASDA github. A train&test split dataset suggested in Eigen et al. is provided in datasplit folder.
 
 ```bash
 python train.py --model style --gpu_ids 0 --batchSize 8 --loadSize 256 1024
