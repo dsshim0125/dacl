@@ -74,11 +74,11 @@ Finetune the task-specific network with pretrained encoders in stage 2. In depth
 #### Depth Estimation
 - Target to Source Depth  
 ```bash
-python train.py --model ft --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_tgt_premodel ./cyclegan/G_Tgt.pth --t_depth_premodel ./checkpoints/vkitti2kitti_ft_pretrain/**_net_G_Depth_T.pth
+python train.py --model ft --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_tgt_premodel ./cyclegan/G_Tgt.pth --t_depth_premodel ./checkpoints/vkitti2kitti_ft_pretrain/best_net_G_Depth_T.pth
 ```
 - Source to Target Depth
 ```bash
-python train.py --model ft --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_src_premodel ./cyclegan/G_Src.pth --s_depth_premodel ./checkpoints/vkitti2kitti_fs_pretrain/**_net_G_Depth_S.pth
+python train.py --model ft --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_src_premodel ./cyclegan/G_Src.pth --s_depth_premodel ./checkpoints/vkitti2kitti_fs_pretrain/best_net_G_Depth_S.pth
 ```
 - Bidirectional Depth
 ```bash
