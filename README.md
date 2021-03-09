@@ -65,3 +65,5 @@ python train.py --model ft_pretrain --gpu_ids 0 --batchSize 8 --loadSize 256 102
 ```bash
 python train.py --model fㄴ_pretrain --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_tgt_premodel ./cyclegan/G_Tgt.pth
 ```
+### Stage 3: Task-specific Finetuning
+- Depth Estimation
