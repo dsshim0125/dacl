@@ -24,3 +24,4 @@ pip install pillow==7.2.0 opencv-contrib-python==4.4.0.42
 ```
 If you do not use Anaconda environment, please use pip3 rather than pip for dependencies with Python3.
 
+### Stage 1: Style Transfer
