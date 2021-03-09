@@ -57,3 +57,11 @@ Train a bidirectional style transfer network via our providing codes, or downloa
 ```bash
 python train.py --model style --gpu_ids 0 --batchSize 8 --loadSize 256 1024
 ```
+### Stage 2: Unsupervised pretraining
+```bash
+python train.py --model ft_pretrain --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_tgt_premodel ./cyclegan/G_Tgt.pth
+```
+
+```bash
+python train.py --model fㄴ_pretrain --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_tgt_premodel ./cyclegan/G_Tgt.pth
+```
