@@ -86,13 +86,13 @@ python train.py --freeze_bn --freeze_in --model depth --gpu_ids 0 --batchSize 4 
 ```
 #### Semantic Segmentation
 - Source to Target Segmentation
-- 
+
 ```bash
 python train.py --model seg --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_src_premodel ./cyclegan/G_Src.pth --s_depth_premodel ./checkpoints/vkitti2kitti_fs_pretrain/best_net_G_Depth_S.pth
 ```
 ### Evaluation
 - Depth Estimation
-- 
+
 Download [Pretrained Models](https://drive.google.com/drive/folders/1EKYUl1nh6s9tfEYJxlbjgGlk8RM7-ND4?usp=sharing) and place it in checkpoints/vkitti2kitti_depth folder for evaluating our best results.
 
 ```bash
