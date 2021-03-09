@@ -51,6 +51,7 @@ If you do not use Anaconda environment, please use pip3 rather than pip for depe
                |----.......
 ```
 
+### Train 
 ### Stage 1: Style Transfer
 
 Train a bidirectional style transfer network via our providing codes, or download [pretrained models](https://onedrive.live.com/?authkey=%21AJorokRKW4ATgZ8&id=CC387DDA3ECA5EAF%21113&cid=CC387DDA3ECA5EAF) from GASDA github.
