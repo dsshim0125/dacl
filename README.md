@@ -82,7 +82,7 @@ python train.py --model ft --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_src
 ```
 - Bidirectional Depth
 ```bash
-python train.py --freeze_bn --freeze_in --model gasda --gpu_ids 0 --batchSize 4 --loadSize 192 640 --g_src_premodel ./cyclegan/G_Src.pth --g_tgt_premodel ./cyclegan/G_Tgt.pth --d_src_premodel ./cyclegan/D_Src.pth --d_tgt_premodel ./cyclegan/D_Tgt.pth --t_depth_premodel ./checkpoints/vkitti2kitti_ft/20_net_G_Depth_T.pth --s_depth_premodel ./checkpoints/vkitti2kitti_fs/20_net_G_Depth_S.pth 
+python train.py --freeze_bn --freeze_in --model depth --gpu_ids 0 --batchSize 4 --loadSize 192 640 --g_src_premodel ./cyclegan/G_Src.pth --g_tgt_premodel ./cyclegan/G_Tgt.pth --d_src_premodel ./cyclegan/D_Src.pth --d_tgt_premodel ./cyclegan/D_Tgt.pth --t_depth_premodel ./checkpoints/vkitti2kitti_ft/20_net_G_Depth_T.pth --s_depth_premodel ./checkpoints/vkitti2kitti_fs/20_net_G_Depth_S.pth 
 ```
 #### Semantic Segmentation
 
