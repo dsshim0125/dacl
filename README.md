@@ -78,7 +78,7 @@ python train.py --model ft --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_tgt
 ```
 - Source to Target Depth
 ```bash
-python train.py --model ft --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_src_premodel ./cyclegan/G_Src.pth --s_depth_premodel ./checkpoints/vkitti2kitti_fs_pretrain/best_net_G_Depth_S.pth
+python train.py --model fs --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_src_premodel ./cyclegan/G_Src.pth --s_depth_premodel ./checkpoints/vkitti2kitti_fs_pretrain/best_net_G_Depth_S.pth
 ```
 - Bidirectional Depth
 ```bash
