@@ -97,7 +97,7 @@ python train.py --model seg --root /YOUR/OWN/ROOT --gpu_ids 0 --batchSize 8 --lo
 Download [Pretrained Models](https://drive.google.com/drive/folders/1EKYUl1nh6s9tfEYJxlbjgGlk8RM7-ND4?usp=sharing) and place it in checkpoints/vkitti2kitti_depth folder for evaluating our best results.
 
 ```bash
-python test_depth.py --model depth --root /YOUR/OWN/ROOT --test_datafile 'test.txt' --which_epoch best --gpu_ids 0 --batchSize 1 --loadSize 192 640
+python test_depth.py --root /YOUR/OWN/ROOT --test_datafile 'test.txt' --which_epoch best --gpu_ids 0 --batchSize 1 --loadSize 192 640
 ```
 - Semantic Segmentation
 
