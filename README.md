@@ -99,7 +99,7 @@ Download [Pretrained Models](https://drive.google.com/drive/folders/1EKYUl1nh6s9
 ```bash
 python test_depth.py --model depth --root /YOUR/OWN/ROOT --test_datafile 'test.txt' --which_epoch best --gpu_ids 0 --batchSize 1 --loadSize 192 640
 ```
--Semantic Segmentation
+- Semantic Segmentation
 
 Download [Pretrained Models](https://drive.google.com/file/d/1y07J2fENcCQ1hi93VzimUfwVhXA3MAiR/view?usp=sharing) and place it in checkpoints/vkitti2kitti_seg folder for evaluating our best results. We only support a single-GPU evaluation for semantic segmentation. For evaluating our method on KITTI semantic segmentation benchmark, you should download 200 images and its paired labels from KITTI semantic segmentation [here](http://www.cvlibs.net/datasets/kitti/eval_semseg.php?benchmark=semantics2015) and place it in kitti folder in root path.
 
