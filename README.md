@@ -96,7 +96,7 @@ python train.py --freeze_bn --freeze_in --model depth --root /YOUR/OWN/ROOT --gp
 - Source to Target Segmentation
 
 ```bash
-python train.py --model seg --root /YOUR/OWN/ROOT --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_src_premodel ./cyclegan/G_Src.pth --s_depth_premodel ./checkpoints/vkitti2kitti_fs_pretrain/best_net_G_Depth_S.pth
+python train.py --model seg --root /YOUR/OWN/ROOT --gpu_ids 0 --batchSize 8 --loadSize 192 640 --g_src_premodel ./cyclegan/G_Src.pth --s_seg_premodel ./checkpoints/vkitti2kitti_seg_pretrain/best_net_G_Pretrain_S.pth
 ```
 ### Evaluation
 - Depth Estimation
