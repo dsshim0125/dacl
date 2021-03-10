@@ -36,6 +36,9 @@ If you do not use Anaconda environment, please use pip3 rather than pip for depe
          |----2011_09_26         
          |----2011_09_28        
          |----......... 
+	 |-----train.txt
+         |-----val.txt
+	 |-----test.txt 	
 	 
   |----vkitti 
          |----rgb        
@@ -49,6 +52,10 @@ If you do not use Anaconda environment, please use pip3 rather than pip for depe
          |----semantic_label       
                |----0006        
                |----.......
+	       
+	 |-----train.txt
+         |-----val.txt
+	 |-----test.txt 
 ```
 
 ### Train 
