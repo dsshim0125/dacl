@@ -66,7 +66,7 @@ Train a bidirectional style transfer network via our providing codes, or downloa
 python train.py --model style --root /YOUR/OWN/ROOT --gpu_ids 0 --batchSize 8 --loadSize 256 1024
 ```
 ### Stage 2: Unsupervised pretraining
-We train the encoder of task-specific network with the results of style transfer network in stage 1 in a bidirectional way. We also provide pretrained models of the [encoders](https://drive.google.com/drive/folders/1vDXdnQ8nRxOaixu3HkdanP0IfB39FEms?usp=sharing).
+We train the encoder of task-specific network with the results of style transfer network in stage 1 in a bidirectional way. We also provide [pretrained models]((https://drive.google.com/drive/folders/1vDXdnQ8nRxOaixu3HkdanP0IfB39FEms?usp=sharing)) of the encoders.
 
 - Target to Source
 ```bash
