@@ -61,11 +61,11 @@ python train.py --model style --root /YOUR/OWN/ROOT --gpu_ids 0 --batchSize 8 --
 ### Stage 2: Unsupervised pretraining
 We train the encoder of task-specific network with the results of style transfer network in stage 1 in a bidirectional way. We also provide pretrained models of the [encoders](https://drive.google.com/drive/folders/1vDXdnQ8nRxOaixu3HkdanP0IfB39FEms?usp=sharing).
 
-- Source to Target
+- Target to Source
 ```bash
 python train.py --model ft_pretrain --root /YOUR/OWN/ROOT --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_tgt_premodel ./checkpoints/vkitti2kitti_style/best_net_G_Tgt.pth
 ```
-- Target to Source
+- Source to Target
 ```bash
 python train.py --model fs_pretrain --root /YOUR/OWN/ROOT --gpu_ids 0 --batchSize 8 --loadSize 256 1024 --g_src_premodel ./checkpoints/vkitti2kitti_style/best_net_G_Src.pth
 ```
