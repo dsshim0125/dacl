@@ -1,6 +1,6 @@
 ## Learning a Domain-Agnostic Representation for Autonomous Driving via Contrastive Loss
 ### IEEE IROS 2021 Submission
-This repo provides an official PyTorch implementation of DACL submitted in IEEE IROS 2021 and offers pretrained encoders, and depth estimation and semantic segmentation networks.
+This repo provides an official PyTorch implementation of DACL submitted to IEEE IROS 2021 and offers pretrained encoders, and depth estimation and semantic segmentation networks.
 
 ### Overview
 <p align="center">
