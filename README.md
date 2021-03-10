@@ -61,7 +61,7 @@ If you do not use Anaconda environment, please use pip3 rather than pip for depe
 ### Train 
 ### Stage 1: Style Transfer
 
-Train a bidirectional style transfer network via our providing codes, or download [pretrained models](https://onedrive.live.com/?authkey=%21AJorokRKW4ATgZ8&id=CC387DDA3ECA5EAF%21113&cid=CC387DDA3ECA5EAF) from GASDA github.
+Train a bidirectional style transfer network via our providing codes, or download [pretrained models](https://drive.google.com/drive/folders/1S9FbJoiLJnHF6MrTr41Q2y2lPGS_nsi7?usp=sharing) from GASDA [github](https://github.com/sshan-zhao/GASDA).
 ```bash
 python train.py --model style --root /YOUR/OWN/ROOT --gpu_ids 0 --batchSize 8 --loadSize 256 1024
 ```
