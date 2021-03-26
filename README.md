@@ -2,6 +2,8 @@
 ### IEEE IROS 2021 Submission
 This repo provides an official PyTorch implementation of DACL submitted to IEEE IROS 2021 and offers pretrained encoders, and depth estimation and semantic segmentation networks.
 
+Paper link: [https://arxiv.org/abs/2103.05902](https://arxiv.org/abs/2103.05902)
+
 ### Overview
 <p align="center">
 	<img src="figure/figure1.png" alt="photo not available" width="80%" height="80%">
