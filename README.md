@@ -1,4 +1,4 @@
-## Learning a Domain-Agnostic Visual Representation for Autonomous Driving via Contrastive Loss
+## DACL
 This repo provides an official PyTorch implementation of "Learning a Domain-Agnostic Visual Representation for Autonomous Driving via Contrastive Loss" [[paper](https://arxiv.org/abs/2103.05902)]
 
 ### Overview
