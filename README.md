@@ -1,5 +1,5 @@
 # DACL
-This repo provides an official PyTorch implementation of the paper "DACL: Learning a Domain-Agnostic Contrastive Representation \\for Dense Prediction beyond Distribution Gap"
+This repo provides an official PyTorch implementation of the paper "DACL: Learning a Domain-Agnostic Contrastive Representation for Dense Prediction beyond Distribution Gap"
 
 ### Overview
 <p align="center">
