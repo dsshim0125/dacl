@@ -1,5 +1,5 @@
 # DACL
-This repo provides an official PyTorch implementation of "Learning a Domain-Agnostic Visual Representation for Autonomous Driving via Contrastive Loss" [[paper](https://arxiv.org/abs/2103.05902)]
+This repo provides an official PyTorch implementation of "DACL: Learning a Domain-Agnostic Contrastive Representation \\for Dense Prediction beyond Distribution Gap"
 
 ### Overview
 <p align="center">
